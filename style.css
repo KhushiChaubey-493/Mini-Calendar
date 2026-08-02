@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+.hero{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#7c3aed);
+    background-size:300% 300%;
+    animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+    from{
+        background-position:left;
+    }
+    to{
+        background-position:right;
+    }
+}
+
+.calendar{
+    width:340px;
+    height:240px;
+    display:flex;
+    overflow:hidden;
+    border-radius:25px;
+
+    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.3);
+
+    transition:.4s;
+    animation:float 4s ease-in-out infinite;
+}
+
+.calendar:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+.left{
+    width:60%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.right{
+    width:40%;
+    background:linear-gradient(180deg,#ff416c,#ff4b2b);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+#date{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:white;
+    color:#ff416c;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+    font-weight:700;
+
+    box-shadow:
+        0 10px 25px rgba(255,255,255,.25);
+}
+
+#day{
+    margin-top:18px;
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+#month{
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+#year{
+    font-size:22px;
+    opacity:.9;
+}
+
+@media(max-width:450px){
+
+    .calendar{
+        width:300px;
+        height:210px;
+    }
+
+    #date{
+        width:95px;
+        height:95px;
+        font-size:42px;
+    }
+
+    #month{
+        font-size:24px;
+    }
+
+    #day{
+        font-size:20px;
+    }
+}
