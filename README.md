@@ -292,20 +292,6 @@ in a modern web browser.
 
 No backend, database, package manager, or build process is required.
 
----
-
-## 📸 Project Preview
-
-You can add a screenshot to the repository and display it here:
-
-```markdown id="k4x7dn"
-![Mini Calendar Screenshot](screenshot.png)
-```
-
-Replace `screenshot.png` with the actual screenshot filename after adding it to the repository.
-
----
-
 ## 🎯 Learning Objectives
 
 This project was created to practice:
